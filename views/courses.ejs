@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniCourse</title>
+    <link rel="icon" type="image/x-icon" href="images/hackTjLogoIcon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div id="subheader">
+        <a href="/home" id="logoLink"
+          ><img
+            src="images/hackTjLogoFavicon.svg"
+            alt="HackTJ Logo"
+            id="headerLogo"
+        /></a>
+        <div id="rightHeader">
+          <a href="/about" aria-label="About Lumos" class="headerLink"
+            ><p id="aboutTitle" class="headerText">About</p></a
+          >
+          <a href="/team" aria-label="Lumos Team" class="headerLink"
+            ><p id="aboutTitle" class="headerText">Team</p></a
+          >
+          <a href="/contact" aria-label="Contact Lumos" class="headerLink"
+            ><p id="aboutTitle" class="headerText">Contact</p></a
+          >
+          <a href="/register" aria-label="Register" id="signUpButton"
+            ><button class="signUp">Sign up</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="maincontent">
+      <div id="leftWrapper">
+        <div id="topAlert">
+          <div id="subalert">
+            <p id="alertText"></p>
+            <button id="declineButton">Completed prereq over the summer</button>
+            <p id="declineStore" style="display: none"></p>
+            <button id="deleteButton">X</button>
+          </div>
+        </div>
+        <div id="display" class="noselect">
+          <div id="year1" class="year">
+            <div class="yearHead">Freshman</div>
+            <div class="yearlist">
+              <div draggable="true" class="course slot1">
+                <p class="fillerTitle">First Period</p>
+              </div>
+              <div draggable="true" class="course slot2">
+                <p class="fillerTitle">Second Period</p>
+              </div>
+              <div draggable="true" class="course slot3">
+                <p class="fillerTitle">Third Period</p>
+              </div>
+              <div draggable="true" class="course slot4">
+                <p class="fillerTitle">Fourth Period</p>
+              </div>
+              <div draggable="true" class="course slot5">
+                <p class="fillerTitle">Fifth Period</p>
+              </div>
+              <div draggable="true" class="course slot6">
+                <p class="fillerTitle">Sixth Period</p>
+              </div>
+              <div draggable="true" class="course slot7">
+                <p class="fillerTitle">Seventh Period</p>
+              </div>
+            </div>
+          </div>
+          <div id="year2" class="year">
+            <div class="yearHead">Sophomore</div>
+            <div class="yearlist">
+              <div draggable="true" class="course slot1">
+                <p class="fillerTitle">First Period</p>
+              </div>
+              <div draggable="true" class="course slot2">
+                <p class="fillerTitle">Second Period</p>
+              </div>
+              <div draggable="true" class="course slot3">
+                <p class="fillerTitle">Third Period</p>
+              </div>
+              <div draggable="true" class="course slot4">
+                <p class="fillerTitle">Fourth Period</p>
+              </div>
+              <div draggable="true" class="course slot5">
+                <p class="fillerTitle">Fifth Period</p>
+              </div>
+              <div draggable="true" class="course slot6">
+                <p class="fillerTitle">Sixth Period</p>
+              </div>
+              <div draggable="true" class="course slot7">
+                <p class="fillerTitle">Seventh Period</p>
+              </div>
+            </div>
+          </div>
+          <div id="year3" class="year">
+            <div class="yearHead">Junior</div>
+            <div class="yearlist">
+              <div draggable="true" class="course slot1">
+                <p class="fillerTitle">First Period</p>
+              </div>
+              <div draggable="true" class="course slot2">
+                <p class="fillerTitle">Second Period</p>
+              </div>
+              <div draggable="true" class="course slot3">
+                <p class="fillerTitle">Third Period</p>
+              </div>
+              <div draggable="true" class="course slot4">
+                <p class="fillerTitle">Fourth Period</p>
+              </div>
+              <div draggable="true" class="course slot5">
+                <p class="fillerTitle">Fifth Period</p>
+              </div>
+              <div draggable="true" class="course slot6">
+                <p class="fillerTitle">Sixth Period</p>
+              </div>
+              <div draggable="true" class="course slot7">
+                <p class="fillerTitle">Seventh Period</p>
+              </div>
+            </div>
+          </div>
+          <div id="year4" class="year">
+            <div class="yearHead">Senior</div>
+            <div class="yearlist">
+              <div draggable="true" class="course slot1">
+                <p class="fillerTitle">First Period</p>
+              </div>
+              <div draggable="true" class="course slot2">
+                <p class="fillerTitle">Second Period</p>
+              </div>
+              <div draggable="true" class="course slot3">
+                <p class="fillerTitle">Third Period</p>
+              </div>
+              <div draggable="true" class="course slot4">
+                <p class="fillerTitle">Fourth Period</p>
+              </div>
+              <div draggable="true" class="course slot5">
+                <p class="fillerTitle">Fifth Period</p>
+              </div>
+              <div draggable="true" class="course slot6">
+                <p class="fillerTitle">Sixth Period</p>
+              </div>
+              <div draggable="true" class="course slot7">
+                <p class="fillerTitle">Seventh Period</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="selector">
+        <div id="topCourseSelect">
+          <p id="courseTitleHeader">Course Selector</p>
+          <div id="search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search courses..."
+            />
+          </div>
+          <div id="courselist" class="courseListInsert"></div>
+        </div>
+        <div id="bottomStats">
+          <div id="bottomSub">
+            <p id="bottomGPATitle">GPA Statistics</p>
+            <div id="subGPA">
+              <div class="subsubGpa">
+                <p class="optimalGPATitle">--.--</p>
+                <p class="optimalTitle">Maximum GPA</p>
+              </div>
+              <div class="subsubGpa">
+                <p class="optimalGPATitle">--.--</p>
+                <p class="optimalTitle">Predicted GPA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="autofillButton">
+          <button id="autofill" onclick="fillClasses()">Autofill required courses</button>
+        </div>
+      </div>
+    </div>
+    <div id="spacer"></div>
+    <div id="footer">Created by Samuel Stankiewicz and Peter Kisselev for HackTJ, 2024</div>
+    <script>
+          const courses = [
+            {
+              id: 119504,
+              name: "AP English Literature",
+              type: "humanities",
+              prereqs: ['1150T1'],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement English Literature course focusing on literary analysis and interpretation.",
+            },
+            {
+              id: "1111111",
+              name: "English 9 HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level course covering literature, composition, and language skills for 9th grade.",
+            },
+            {
+              id: "113036",
+              name: "English 10 HN",
+              type: "humanities",
+              prereqs: ["1111111"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level course covering literature, composition, and language skills for 9th grade.",
+            },
+            {
+              id: 511000,
+              name: "French 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [9],
+              predictedGrade: 3.8,
+              description:
+                "Introduction to the French language and culture for beginners.",
+            },
+            {
+              id: 119604,
+              name: "AP English Language",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement English Language course focusing on rhetorical analysis and argumentation.",
+            },
+            {
+              id: 119662,
+              name: "AP English Language",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement English Language course focusing on rhetorical analysis and argumentation.",
+            },
+            {
+              id: 512000,
+              name: "French 2",
+              type: "language",
+              prereqs: [511000],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.0,
+              description:
+                "Continuation of French language study with emphasis on grammar and vocabulary expansion.",
+            },
+            {
+              id: 120000,
+              name: "Journalism 1",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description:
+                "Introduction to journalism principles, including writing, reporting, and editing.",
+            },
+            {
+              id: 513000,
+              name: "French 3",
+              type: "language",
+              prereqs: [512000],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.2,
+              description:
+                "Intermediate French language course with focus on communication skills and cultural understanding.",
+            },
+            {
+              id: 121000,
+              name: "Journalism 2",
+              type: "humanities",
+              prereqs: [120000],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description:
+                "Continuation of journalism principles with emphasis on advanced writing techniques and newsroom procedures.",
+            },
+            {
+              id: 514000,
+              name: "French 4 HN",
+              type: "language",
+              prereqs: [513000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level French language course focusing on advanced grammar, literature, and composition.",
+            },
+            {
+              id: 121100,
+              name: "Journalism 3 HN",
+              type: "humanities",
+              prereqs: [121000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level journalism course emphasizing investigative reporting, multimedia storytelling, and editorial leadership.",
+            },
+            {
+              id: "244504",
+              name: "AP US Government",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.9,
+              description: "College-level course covering the structure and function of the United States government."
+            },
+            {
+              id: 119505,
+              name: "AP English Literature (with AP Gov)",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [244506],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement English Literature course focusing on literary analysis and interpretation.",
+            },
+            {
+              id: 515000,
+              name: "French 5 HN",
+              type: "language",
+              prereqs: [514000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level French language course emphasizing advanced literature analysis, composition, and cultural fluency.",
+            },
+            {
+              id: 121200,
+              name: "Journalism 4 HN",
+              type: "humanities",
+              prereqs: [121100],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level journalism course focusing on long-form journalism, publication management, and professional portfolio development.",
+            },
+            {
+              id: "525000",
+              name: "German 4 HN",
+              type: "language",
+              prereqs: ["522000"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.4,
+              description: "Honors-level course continuing the study of the German language and culture."
+            },
+              {
+              id: "582000",
+              name: "German 5 HN",
+              type: "language",
+              prereqs: ["525000"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description: "Honors-level course furthering the study of advanced German language skills and cultural understanding."
+            },
+            {
+              id: 517004,
+              name: "AP French Lang",
+              type: "language",
+              prereqs: [515000],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement French Language course emphasizing communication skills in French, including speaking, listening, reading, and writing.",
+            },
+            {
+              id: 121500,
+              name: "Photojournalism 1",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description:
+                "Introduction to the principles and techniques of photojournalism, including photography basics and story composition.",
+            },
+            {
+              id: 521000,
+              name: "German 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [9],
+              predictedGrade: 3.9,
+              description:
+                "Introduction to the German language and culture for beginners.",
+            },
+            {
+              id: "523000",
+              name: "German 3",
+              type: "language",
+              prereqs: ["522000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.2,
+              description: "Standard course continuing the study of the German language and culture."
+            },
+            {
+              id: 121600,
+              name: "Photojournalism 2",
+              type: "humanities",
+              prereqs: [121500],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description:
+                "Continuation of photojournalism techniques with emphasis on advanced photography skills and visual storytelling.",
+            },
+            {
+              id: "1150T1",
+              name: "English 11 HN",
+              type: "humanities",
+              prereqs: ["113036"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description:
+                "Standard English course focusing on literature, composition, and language skills development.",
+            },
+            {
+              id: 522000,
+              name: "German 2",
+              type: "language",
+              prereqs: [521000],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.0,
+              description:
+                "Continuation of German language study with emphasis on vocabulary expansion and grammar.",
+            },
+            {
+              id: 121700,
+              name: "Photojournalism 3 HN",
+              type: "humanities",
+              prereqs: [121600],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level photojournalism course emphasizing advanced photo editing, portfolio development, and multimedia storytelling techniques.",
+            },
+            {
+              id: 121714,
+              name: "Photojournalism 4 HN",
+              type: "humanities",
+              prereqs: [121700],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level advanced photojournalism course focusing on professional portfolio development and publication preparation.",
+            },
+            {
+              id: "3190T1",
+              name: "Research Stat 1 TJ HN",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level introductory course in research statistics focusing on data analysis and interpretation.",
+            },
+            {
+              id: 532000,
+              name: "Latin 2",
+              type: "language",
+              prereqs: [531000],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.1,
+              description:
+                "Continuation of Latin language study with emphasis on grammar, vocabulary, and translation skills.",
+            },
+            {
+              id: "919332",
+              name: "Photography 1",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description: "Standard course introducing the principles and techniques of photography."
+            },
+            {
+              id: "919432",
+              name: "Photography 2",
+              type: "humanities",
+              prereqs: ["919332"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description: "Standard course continuing the study of photography techniques and practices."
+            },
+            {
+              id: 139000,
+              name: "Forensics",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.2,
+              description:
+                "Introduction to the principles and practices of forensic science, including crime scene investigation and evidence analysis.",
+            },
+            {
+              id: 222136,
+              name: "World Hist & Geo 2 HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [10],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level continuation of world history and geography survey focusing on modern global events and regions.",
+            },
+            {
+              id: 533000,
+              name: "Latin 3",
+              type: "language",
+              prereqs: [532000],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.2,
+              description:
+                "Intermediate Latin language course with focus on reading comprehension and analysis of classical texts.",
+            },
+            {
+              id: 144632,
+              name: "Film Study",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.3,
+              description:
+                "Exploration of film as an art form, including analysis of cinematic techniques, genres, and cultural impact.",
+            },
+            {
+              id: 534000,
+              name: "Latin 4 HN",
+              type: "language",
+              prereqs: [533000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level Latin language course focusing on advanced translation, composition, and historical context.",
+            },
+            {
+              id: "1160T1",
+              name: "English 12 HN",
+              type: "humanities",
+              prereqs: ["1150T1"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level English course focusing on literature analysis, critical thinking, and writing skills.",
+            },
+            {
+              id: 535000,
+              name: "Latin 5 HN",
+              type: "language",
+              prereqs: [534000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level Latin language course emphasizing advanced literature analysis, composition, and cultural fluency.",
+            },
+            {
+              id: 537004,
+              name: "AP Latin",
+              type: "language",
+              prereqs: [535000],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement course focusing on advanced Latin grammar, literature, and cultural studies.",
+            },
+            {
+              id: "4310T1",
+              name: "Biology 1 HN",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [9],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level introduction to biology covering cell biology, genetics, and ecology.",
+            },
+            {
+              id: "4310T2",
+              name: "AP Biology",
+              type: "science",
+              prereqs: ["4310T1"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [10, 11],
+              predictedGrade: 4.7,
+              description:
+                "Honors-level introduction to biology covering cell biology, genetics, and ecology.",
+            },
+            {
+              id: 544000,
+              name: "Russian 4 HN",
+              type: "language",
+              prereqs: [543000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level Russian language course focusing on advanced grammar, literature, and composition.",
+            },
+            {
+              id: 239904,
+              name: "AP European History",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement course covering European history from the Renaissance to the present.",
+            },
+            {
+              id: 984060,
+              name: "Design & Tech",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.3,
+              description:
+                "Introduction to design principles and technology applications in various fields.",
+            },
+            {
+              id: 545000,
+              name: "Russian 5 HN",
+              type: "language",
+              prereqs: [544000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level Russian language course emphasizing advanced literature analysis, composition, and cultural fluency.",
+            },
+            {
+              id: "3190T1",
+              name: "Research Stat 1 TJ HN",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level introductory course in research statistics focusing on data analysis and interpretation.",
+            },
+            {
+              id: 139000,
+              name: "Forensics",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.2,
+              description:
+                "Introduction to the principles and practices of forensic science, including crime scene investigation and evidence analysis.",
+            },
+            {
+              id: 144632,
+              name: "Film Study",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.3,
+              description:
+                "Exploration of film as an art form, including analysis of cinematic techniques, genres, and cultural impact.",
+            },
+            {
+              id: 534000,
+              name: "Latin 4 HN",
+              type: "humanities",
+              prereqs: [533000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level Latin language course focusing on advanced translation, composition, and historical context.",
+            },
+            {
+              id: 139000,
+              name: "Forensics",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.2,
+              description:
+                "Introduction to the principles and practices of forensic science, including crime scene investigation and evidence analysis.",
+            },
+            {
+              id: 144632,
+              name: "Film Study",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.3,
+              description:
+                "Exploration of film as an art form, including analysis of cinematic techniques, genres, and cultural impact.",
+            },
+            {
+              id: 534000,
+              name: "Latin 4 HN",
+              type: "humanities",
+              prereqs: [533000],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level Latin language course focusing on advanced translation, composition, and historical context.",
+            },
+            {
+              id: 557004,
+              name: "AP Spanish Language",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement course emphasizing Spanish language proficiency in speaking, listening, reading, and writing.",
+            },
+            {
+              id: "3184T1",
+              name: "Comp Sci Foundations HN",
+              type: "cs",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level course introducing foundational concepts in computer science, including algorithms, data structures, and programming.",
+            },
+            {
+              id: 558004,
+              name: "AP Spanish Literature",
+              type: "languages",
+              prereqs: [557004],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement course exploring Spanish and Latin American literary works, genres, and themes.",
+            },
+            {
+              id: 237100,
+              name: "African American Studies",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.3,
+              description:
+                "Exploration of the history, culture, and contributions of African Americans to American society.",
+            },
+            {
+              id: "2996T1",
+              name: "History of Science TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level exploration of the development of scientific ideas and their impact on society throughout history.",
+            },
+            {
+              id: "2340T1",
+              name: "20th Cent World Hist HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level study of global events, trends, and conflicts in the 20th century.",
+            },
+            {
+              id: "2373TJ",
+              name: "Ethnic Studies TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [10],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level examination of the history, culture, and experiences of various ethnic groups in the United States.",
+            },
+            {
+              id: "2900T1",
+              name: "Psych: Brain & Beh TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level exploration of the biological basis of behavior, cognition, and mental processes.",
+            },
+            {
+              id: "2950T1",
+              name: "Inquiry into Ideas TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level investigation of philosophical, ethical, and moral ideas and their application to contemporary issues.",
+            },
+            {
+              id: "2374T1",
+              name: "Anthro Studies TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level study of human cultures, societies, and behaviors from an anthropological perspective.",
+            },
+            {
+              id: "2420T1",
+              name: "Law and Society TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level examination of the interplay between law, politics, and society in historical and contemporary contexts.",
+            },
+            {
+              id: "2900T1",
+              name: "Psych: Brain & Beh TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level exploration of the biological basis of behavior, cognition, and mental processes.",
+            },
+            {
+              id: "2950T1",
+              name: "Inquiry into Ideas TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.4,
+              description:
+                "Honors-level investigation of philosophical, ethical, and moral ideas and their application to contemporary issues.",
+            },
+            {
+              id: "317004",
+              name: "AP Calculus AB",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Advanced Placement course covering topics in differential and integral calculus.",
+            },
+            {
+              id: "317704",
+              name: "AP Calculus BC",
+              type: "math",
+              prereqs: ["316055"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.7,
+              description:
+                "Advanced Placement extension of AP Calculus AB, including additional topics in calculus and series.",
+            },
+            {
+              id: "3177VV",
+              name: "AP Calc BC Post-AB",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced Placement course focusing on topics in calculus beyond those covered in AP Calculus AB.",
+            },
+            {
+              id: "317860",
+              name: "Multivar Calculus AV (or DE)",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course covering topics in multivariable calculus, including vector calculus and multivariable integration.",
+            },
+            {
+              id: "317861",
+              name: "Differential Equat AV (or DE)",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course focusing on differential equations and their applications in various fields.",
+            },
+            {
+              id: "231905",
+              name: "AP US History",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Medium",
+              years: [11],
+              predictedGrade: 5.0,
+              description: "College-level course covering the history of the United States from pre-Columbian times to the present."
+            },
+            {
+              id: "447004",
+              name: "AP Chemistry",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.9,
+              description: "College-level course covering topics in chemistry such as atomic structure, chemical bonding, and kinetics."
+            },
+            {
+              id: "457004",
+              name: "AP Physics C M&EM",
+              type: "science",
+              prereqs: ["451036"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.9,
+              description: "College-level course covering mechanics and electricity/magnetism using calculus-based methods."
+            },
+            {
+              id: "317862",
+              name: "Complex Analysis AV (or DE)",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.9,
+              description:
+                "Advanced course exploring complex numbers and functions, including analytic functions and contour integration.",
+            },
+            {
+              id: "319800",
+              name: "Matrix (Linear) Algebra AV (or DE)",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course covering topics in linear algebra, including matrices, vector spaces, and eigenvalues.",
+            },
+            {
+              id: "441036",
+              name: "Chemistry 1 HN",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description: "Honors-level course covering fundamental principles of chemistry, including atomic structure, chemical bonding, and reactions."
+            },
+              {
+              id: "451036",
+              name: "Physics 1 HN",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.4,
+              description: "Honors-level course covering fundamental principles of physics, including mechanics, thermodynamics, and waves."
+            },
+            {
+              id: "319862",
+              name: "Math Techniques (AMT) AV",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course focusing on mathematical techniques and problem-solving strategies.",
+            },
+            {
+              id: "318561",
+              name: "AP Computer Science A+ TJ",
+              type: "cs",
+              prereqs: ["3184T1"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [10, 11, 12],
+              predictedGrade: 4.9,
+              description: "College-level course introducing fundamental concepts in computer science and programming using Java."
+            },
+            {
+              id: "3199TB",
+              name: "Concrete Mathematics HN",
+              type: "math",
+              prereqs: ["317004"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.7,
+              description:
+                "Honors-level course covering topics in discrete mathematics, combinatorics, and number theory.",
+            },
+            {
+              id: "319916",
+              name: "Computer Vision 1 TJ AV",
+              type: "cs",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.5,
+              description:
+                "Introduction to computer vision techniques and algorithms for analyzing and interpreting visual data.",
+            },
+            {
+              id: "319917",
+              name: "Computer Vision 2 TJ AV",
+              type: "cs",
+              prereqs: ["319916"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.7,
+              description:
+                "Advanced course building on Computer Vision 1, focusing on advanced algorithms and applications.",
+            },
+            {
+              id: "612000",
+              name: "Econ Pers Finance",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [12],
+              predictedGrade: 4.2,
+              description: "Standard course introducing personal finance and economic principles."
+            },
+            {
+              id: "280404",
+              name: "AP Mac/Mic Econ",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11, 12],
+              predictedGrade: 4.9,
+              description: "College-level course covering macroeconomics and microeconomics principles."
+            },
+            {
+              id: "923415",
+              name: "Band",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.0,
+              difficulty: "Moderate",
+              years: [10, 11, 12],
+              predictedGrade: 4.4,
+              description: "Honors-level course for advanced instrumentalists focusing on ensemble performance and musical repertoire."
+            },
+            {
+              id: "923915",
+              name: "Advanced Orchestra HN",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [10, 11, 12],
+              predictedGrade: 4.4,
+              description: "Honors-level course for advanced string instrumentalists focusing on ensemble performance and musical repertoire."
+            },
+            {
+              id: "319966",
+              name: "Artificial Intel 1 TJ AV",
+              type: "cs",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.6,
+              description:
+                "Introduction to artificial intelligence concepts and techniques, including search algorithms and machine learning.",
+            },
+            {
+              id: "319967",
+              name: "Artificial Intel 2 TJ AV",
+              type: "cs",
+              prereqs: ["319966"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course in artificial intelligence, covering topics such as neural networks, natural language processing, and reinforcement learning.",
+            },
+            {
+              id: "3199T7",
+              name: "Machine Learn 2 TJ AV",
+              type: "cs",
+              prereqs: ["3199T6"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course in machine learning, focusing on deep learning, reinforcement learning, and neural network architectures.",
+            },
+            {
+              id: "3199T6",
+              name: "Machine Learn 1 TJ AV",
+              type: "cs",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.7,
+              description:
+                "Introduction to machine learning algorithms and techniques, including supervised and unsupervised learning.",
+            },
+            {
+              id: "3199J1",
+              name: "Mobile & Web App Dev TJ AV",
+              type: "cs",
+              prereqs: ["318561"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.6,
+              description:
+                "Introduction to web application development using modern technologies and frameworks.",
+            },
+            {
+              id: "2996T2",
+              name: "Ethical Leadership TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.6,
+              description:
+                "Honors-level course exploring ethical principles and leadership styles in various contexts.",
+            },
+            {
+              id: "4320T7",
+              name: "DNA Science 2 TJ HN",
+              type: "science",
+              prereqs: ["4320T6"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.3,
+              description:
+                "Advanced course in DNA science, focusing on advanced techniques and applications.",
+            },
+            {
+              id: "4320T1",
+              name: "Adv Marine Bio TJ HN",
+              type: "science",
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [10, 11, 12],
+              predictedGrade: 4.3,
+            },
+            {
+              id: "4320T8",
+              name: "Neurobiology TJ AV",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course exploring the structure and function of the nervous system and brain.",
+            },
+            {
+              id: "314351",
+              name: "Math 1 TJ HN",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.6,
+              description:
+                "Honors-level course covering fundamental concepts in algebra, geometry, and trigonometry.",
+            },
+            {
+              id: "314352",
+              name: "Math 2 TJ HN",
+              type: "math",
+              prereqs: ["314351"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [10],
+              predictedGrade: 4.7,
+              description:
+                "Honors-level course continuing the study of algebra, geometry, and trigonometry.",
+            },
+            {
+              id: "313753",
+              name: "Math 3 TJ HN",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.8,
+              description:
+                "Honors-level course focusing on advanced topics in algebra, geometry, and precalculus.",
+            },
+            {
+              id: "316154",
+              name: "Math 4 TJ HN",
+              type: "math",
+              prereqs: ["313753"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Honors-level course covering precalculus and its applications.",
+            },
+            {
+              id: "316154",
+              name: "RS2 & Math 5",
+              type: "math",
+              prereqs: ["313753"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [10, 11],
+              predictedGrade: 4.2,
+              description:
+                "Honors-level courses covering precalculus and its applications.",
+            },
+            {
+              id: "316154",
+              name: "AI 1 & AI 2",
+              type: "cs",
+              prereqs: ["318561"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [10, 11, 12],
+              predictedGrade: 4.2,
+              description:
+                "Artificial Intelligence course.",
+            },
+            {
+              id: "316154",
+              name: "CV 1 & CV 2",
+              type: "cs",
+              prereqs: ["318561"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Moderate",
+              years: [10, 11, 12],
+              predictedGrade: 4.2,
+              description:
+                "Artificial Intelligence course.",
+            },
+            {
+              id: "316154",
+              name: "RS2 & RS3",
+              type: "math",
+              prereqs: ["3190T1"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Moderate",
+              years: [10, 11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Artificial Intelligence course.",
+            },
+            {
+              id: "316055",
+              name: "Math 5 TJ HN",
+              type: "math",
+              prereqs: ["316154"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Moderate",
+              years: [12],
+              predictedGrade: 4.9,
+              description:
+                "Honors-level course focusing on advanced calculus topics, including differential equations and vectors.",
+            },
+            {
+              id: "316056",
+              name: "Math 6 TJ HN",
+              type: "math",
+              prereqs: ["316055"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [12],
+              predictedGrade: 4.9,
+              description:
+                "Honors-level course covering multivariable calculus and its applications.",
+            },
+            {
+              id: "3190T2",
+              name: "Research Stat 2 TJ HN",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [11],
+              predictedGrade: 4.7,
+              description:
+                "Honors-level course introducing statistical methods for research and data analysis.",
+            },
+            {
+              id: "3190T3",
+              name: "Research Stat 3 TJ HN",
+              type: "math",
+              prereqs: ["3190T2"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.8,
+              description:
+                "Advanced course in statistical methods, focusing on experimental design and hypothesis testing.",
+            },
+            {
+              id: "3177VV",
+              name: "AP Calc BC Post-AB",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "College-level course covering additional topics beyond AP Calculus AB and BC.",
+            },
+            {
+              id: "317860",
+              name: "Multivar Calculus AV (or DE)",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "College-level course covering calculus in multiple variables and vector calculus.",
+            },
+            {
+              id: "317861",
+              name: "Differential Equat AV (or DE)",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "College-level course focusing on ordinary and partial differential equations.",
+            },
+            {
+              id: "317862",
+              name: "Complex Analysis AV (or DE)",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "College-level course exploring complex numbers and functions.",
+            },
+            {
+              id: "319800",
+              name: "Matrix (Linear) Algebra AV (or DE)",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "College-level course focusing on matrices, vectors, and linear transformations.",
+            },
+            {
+              id: "319862",
+              name: "Math Techniques (AMT) AV",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "College-level course covering various mathematical techniques and methods.",
+            },
+            {
+              id: "3199TB",
+              name: "Concrete Mathematics HN",
+              type: "math",
+              prereqs: ["317704"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.9,
+              description:
+                "Honors-level course covering mathematical concepts used in computer science and discrete mathematics.",
+            },
+            {
+              id: "319916",
+              name: "Computer Vision 1 TJ AV",
+              type: "cs",
+              prereqs: [],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.9,
+              description:
+                "Advanced course in computer vision, covering image processing and pattern recognition.",
+            },
+            {
+              id: "319917",
+              name: "Computer Vision 2 TJ AV",
+              type: "cs",
+              prereqs: ["319916"],
+              coreqs: [],
+              weight: 5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 5.0,
+              description:
+                "Advanced course continuing the study of computer vision, with a focus on advanced algorithms and applications.",
+            },
+            {
+              id: "422036",
+              name: "Geosystems HN",
+              type: "science",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [10],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level course exploring Earth's physical systems, including geology, meteorology, and oceanography.",
+            },
+            {
+              id: "730000",
+              name: "Health & PE 9",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.0,
+              description: "Standard course covering health and physical education topics for freshmen."
+            },
+            {
+              id: "740500",
+              name: "Health & PE 10",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Easy",
+              years: [10],
+              predictedGrade: 4.0,
+              description: "Standard course covering health and physical education topics for sophomores."
+            },
+            {
+              id: "751050",
+              name: "Yoga for Wellness",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Easy",
+              years: [9, 10, 11, 12],
+              predictedGrade: 4.0,
+              description: "Course focusing on the practice of yoga for physical and mental wellness."
+            },
+            {
+              id: "764061",
+              name: "Personal Fitness 1",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Easy",
+              years: [9, 10, 11, 12],
+              predictedGrade: 4.0,
+              description: "Course emphasizing personal fitness and exercise routines."
+            },
+            {
+              id: "763032",
+              name: "Sports Medicine A",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10, 11, 12],
+              predictedGrade: 4.2,
+              description: "Course covering basic principles of sports medicine and injury prevention."
+            },
+            {
+              id: "763033",
+              name: "Sports Medicine B",
+              type: "other",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11, 12],
+              predictedGrade: 4.2,
+              description: "Continuation of course covering advanced topics in sports medicine and injury management."
+            },
+            {
+              id: "2219T1",
+              name: "Ancnt & Clas Civ TJ HN",
+              type: "humanities",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [10],
+              predictedGrade: 4.6,
+              description:
+                "Honors-level course exploring the civilizations of ancient and classical times, including Greece and Rome.",
+            },
+            {
+              id: "551000",
+              name: "Spanish 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.0,
+              description:
+                "Introductory course focusing on basic vocabulary, grammar, and communication skills in Spanish.",
+            },
+            {
+              id: "552000",
+              name: "Spanish 2",
+              type: "language",
+              prereqs: ["551000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description:
+                "Continuation of Spanish 1, with a focus on expanding vocabulary and grammar skills.",
+            },
+            {
+              id: "553000",
+              name: "Spanish 3",
+              type: "language",
+              prereqs: ["552000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description:
+                "Intermediate course focusing on more complex grammar structures and conversational skills.",
+            },
+            {
+              id: "554000",
+              name: "Spanish 4 HN",
+              type: "language",
+              prereqs: ["553000"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description:
+                "Honors-level course focusing on advanced grammar, literature, and cultural studies in Spanish.",
+            },
+            {
+              id: "541000",
+              name: "Russian 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [9],
+              predictedGrade: 4.1,
+              description: "Standard course introducing the Russian language and culture."
+            },
+            {
+              id: "542000",
+              name: "Russian 2",
+              type: "language",
+              prereqs: ["541000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description: "Standard course continuing the study of the Russian language and culture."
+            },
+            {
+              id: "543000",
+              name: "Russian 3",
+              type: "language",
+              prereqs: ["542000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description: "Standard course furthering the study of the Russian language and culture."
+            },
+            {
+              id: "581000",
+              name: "Chinese 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Easy",
+              years: [9],
+              predictedGrade: 4.0,
+              description: "Introductory course focusing on basic vocabulary, grammar, and communication skills in Chinese."
+            },
+            {
+              id: "582000",
+              name: "Chinese 2",
+              type: "language",
+              prereqs: ["581000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description: "Continuation of Chinese 1, with a focus on expanding vocabulary and grammar skills."
+            },
+            {
+              id: "583000",
+              name: "Chinese 3",
+              type: "language",
+              prereqs: ["582000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description: "Intermediate course focusing on more complex grammar structures and conversational skills in Chinese."
+            },
+            {
+              id: "584000",
+              name: "Chinese 4 HN",
+              type: "language",
+              prereqs: ["583000"],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Hard",
+              years: [12],
+              predictedGrade: 4.5,
+              description: "Honors-level course focusing on advanced grammar, literature, and cultural studies in Chinese."
+            },
+            {
+              id: "571000",
+              name: "Japanese 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [9],
+              predictedGrade: 4.1,
+              description: "Standard course introducing the Japanese language and culture."
+            },
+            {
+              id: "572000",
+              name: "Japanese 2",
+              type: "language",
+              prereqs: ["571000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [10],
+              predictedGrade: 4.2,
+              description: "Standard course continuing the study of the Japanese language and culture."
+            },
+            {
+              id: "573000",
+              name: "Japanese 3",
+              type: "language",
+              prereqs: ["572000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [11],
+              predictedGrade: 4.3,
+              description: "Standard course furthering the study of the Japanese language and culture."
+            },
+            {
+              id: "574000",
+              name: "Japanese 4",
+              type: "language",
+              prereqs: ["573000"],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [12],
+              predictedGrade: 4.4,
+              description: "Standard course deepening the study of the Japanese language and culture."
+            },
+            {
+              id: "531000",
+              name: "Latin 1",
+              type: "language",
+              prereqs: [],
+              coreqs: [],
+              weight: 4,
+              difficulty: "Moderate",
+              years: [9],
+              predictedGrade: 4.1,
+              description: "Standard course introducing the Latin language and classical Roman culture."
+            },
+            {
+              id: "100",
+              name: "Astronomy and Astrophysics Lab",
+              type: "senior",
+              prereqs: [],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "200",
+              name: "Biotechnology and Life Sciences",
+              type: "senior",
+              prereqs: ["4320T7"],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "300",
+              name: "Chemical Analysis and Nanochemistry",
+              type: "senior",
+              prereqs: [],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "400",
+              name: "Computer Systems",
+              type: "senior",
+              prereqs: ["316055", "316154"],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "500",
+              name: "Engineering Research",
+              type: "senior",
+              prereqs: [984060],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "600",
+              name: "Mobile and Web Application Development",
+              type: "senior",
+              prereqs: ["3199J1"],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "700",
+              name: "Neuroscience",
+              type: "senior",
+              prereqs: ["4310T2", "4320T8"],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "800",
+              name: "Oceanography and Geophysical Systems",
+              type: "senior",
+              prereqs: ["4320T1"],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            },
+            {
+              id: "900",
+              name: "Quantum Physics and Optics",
+              type: "senior",
+              prereqs: ["457004"],
+              difficulty: "Hard",
+              years: [12],
+              weight: 5,
+              predictedGrade: 5,
+            }
+          ];
+
+          let GPA = [];
+
+          let toPlace = [];
+
+          function attachListeners(el) {
+            el.addEventListener("dragstart", handleDragStart, false);
+            el.addEventListener("dragenter", handleDragEnter, false);
+            el.addEventListener("dragover", handleDragOver, false);
+            el.addEventListener("dragleave", handleDragLeave, false);
+            el.addEventListener("drop", handleDrop, false);
+            el.addEventListener("dragend", handleDragEnd, false);
+          }
+
+          let numWords = [
+              "First",
+              "Second",
+              "Third",
+              "Fourth",
+              "Fifth",
+              "Sixth",
+              "Seventh",
+              "Eighth",
+              "Ninth",
+              "Tenth",
+            ];
+
+            let crsMax = 7;
+
+            let crsData = [
+              [0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0],
+            ];
+
+            let skipFlags = [];
+
+            const gradReqs = [1, 4, 4, 4, 4, 3, 2, 1, 1];
+
+            let dragSrcEl = null;
+
+            function getYearSlot(el) {
+              pars = $(el).parents();
+              let year = -1;
+              for (let j = 0; j < pars.length; j++) {
+                let curId = String(pars[j].id);
+                if (curId.includes("year")) {
+                  year = Number(curId[4]) - 1;
+                  break;
+                }
+              }
+              let slot = Array.from(el.parentNode.children).indexOf(el);
+
+              return [year, slot];
+            }
+
+            function setBlank(el, num) {
+              el.innerHTML = '';
+              let cL = el.classList;
+              el.classList.remove(...cL);
+              el.classList.add("course", "disabled");
+              el.insertAdjacentHTML('beforeend', `<p class="fillerTitle">` + numWords[num % crsMax] +` Period</p>`);
+              el.setAttribute("draggable", false);
+            }
+
+            function setById (el, id) {
+              course = getArrById(id);
+              allClasses = el.classList;
+              for (let i = 0; i < allClasses.length; i++) {
+                if (allClasses[i] != "course") {
+                  el.classList.remove(allClasses[i]);
+                }
+              }
+              el.classList.add("course");
+              el.classList.add(course.type);
+              el.setAttribute("draggable", true);
+              el.innerHTML =
+                `
+              <div></div>
+              <p class="courseTitle">` +
+                course.name +
+                `</p>
+              <p class="courseInfo">` +
+                course.weight +
+                ` Weighted | Difficulty: ` +
+                course.difficulty +
+                `</p>
+                <p id="baseId" style="display: none">` + course.id + `</p>
+              </div>
+              `;
+              GPA.push(course.id);
+            }
+
+            function swapEls(el1, el2) {
+              pos1 = getYearSlot(el1);
+              pos2 = getYearSlot(el2);
+              if (pos1[0] == -1 && pos2[0] == -1) {
+                return;
+              }
+              if (pos1[0] == -1) {
+                crsData[pos2[0]][pos2[1]] = toPlace[pos1[1]];
+                let id = toPlace[pos1[1]];
+                setById(el2, id);
+                el1.style.display = "none";
+              } else {
+                swapEl = el1.cloneNode(true);
+                if(crsData[pos1[0]][pos1[1]] == 0 && (crsData[pos2[0]][pos2[1]] == 0)) {
+                  return
+
+                }else if (crsData[pos1[0]][pos1[1]] == 0) {
+                  let id = crsData[pos2[0]][pos2[1]];
+                  crsData[pos2[0]][pos2[1]] = 0;
+                  crsData[pos1[0]][pos1[1]] = id;
+                  setBlank(el2, pos2[1]);
+                  setById(el1, id);
+                  el1.setAttribute("draggable", el2.getAttribute("draggable"));
+                  el2.setAttribute("draggable", swapEl.getAttribute("draggable"));
+
+                } else if (crsData[pos2[0]][pos2[1]] == 0) {
+                  let id = crsData[pos1[0]][pos1[1]];
+                  crsData[pos1[0]][pos1[1]] = 0;
+                  crsData[pos2[0]][pos2[1]] = id;
+                  setBlank(el1, pos1[1]);
+                  setById(el2, id);
+                  el1.setAttribute("draggable", el2.getAttribute("draggable"));
+                  el2.setAttribute("draggable", swapEl.getAttribute("draggable"));
+
+                } else {
+                  swapData = crsData[pos1[0]][pos1[1]];
+                  crsData[pos1[0]][pos1[1]] = crsData[pos2[0]][pos2[1]];
+                  crsData[pos2[0]][pos2[1]] = swapData;
+                  el1.innerHTML = el2.innerHTML;
+                  el2.innerHTML = swapEl.innerHTML;
+                  el1.classList = el2.classList;
+                  el2.classList = swapEl.classList;
+                  el1.setAttribute("draggable", el2.getAttribute("draggable"));
+                  el2.setAttribute("draggable", swapEl.getAttribute("draggable"));
+                }
+              }
+              updateValidity()
+            }
+
+            function inMain(el) {
+              pars = $(el).parents();
+              let inBox = false;
+              for (let j = 0; j < pars.length; j++) {
+                let curId = String(pars[j].id);
+                if (curId.includes("year")) {
+                  inBox = true;
+                  break;
+                }
+              }
+              return inBox;
+            }
+
+            function fillCourses () {
+              const elm = courseListElm.insertAdjacentHTML(
+                  "beforeend",
+                  `
+                <div class="` +
+                    "course " +
+                    courses[i].type +
+                    `" draggable="true">
+                  <div></div>
+                  <p class="courseTitle">` +
+                    courses[i].name +
+                    `</p>
+                  <p class="courseInfo">` +
+                    courses[i].weight.toFixed(1) +
+                    ` Weighted | Difficulty: ` +
+                    courses[i].difficulty +
+                    `</p>
+                    <p id="baseId" style="display: none">` + courses[i].id + `</p>
+                </div>
+                `
+                );
+                attachListeners(elm);
+            }
+
+            function handleDragStart(e) {
+              if (this.getAttribute("draggable") == "true") {
+                dragSrcEl = this;
+
+                e.dataTransfer.effectAllowed = "move";
+                e.dataTransfer.setData("text/html", this.innerHTML);
+              }
+            }
+
+            function handleDragOver(e) {
+              if (e.preventDefault) {
+                e.preventDefault();
+              }
+
+              e.dataTransfer.dropEffect = "move";
+
+              return false;
+            }
+
+            function handleDragEnter(e) {
+              this.classList.add("over");
+            }
+
+            function handleDragLeave(e) {
+              this.classList.remove("over");
+            }
+
+            function handleDrop(e) {
+              if (e.stopPropagation) {
+                e.stopPropagation(); // stops the browser from redirecting.
+              }
+              if (dragSrcEl !== this) {
+                swapEls(dragSrcEl, this);
+              }
+              return false;
+            }
+
+            function handleDragEnd(e) {
+              let items = document.getElementsByClassName("course");
+              for (let x = 0; x < items.length; x++) {
+                items[x].classList.remove("over");
+              }
+              if (inMain(this)) {
+                els = document.elementsFromPoint(e.clientX, e.clientY);
+                let notIn = true;
+                for (let i = 0; i < els.length; i++) {
+                  let curId = els[i].id;
+                  if (curId == "display") {
+                    notIn = false;
+                    break;
+                  }
+                }
+                if (notIn) {
+                  let res = getYearSlot(this);
+                  let id = crsData[res[0]][res[1]];
+                  crsData[res[0]][res[1]] = 0;
+                  toPlace.push(pos1[1]);
+                  setBlank(this, res[1]);
+                  setInd = toPlace.indexOf(id);
+                  lst = document.getElementById("courselist");
+                  elToSet = lst.children[setInd];
+                  elToSet.style.display = "";
+                  updateValidity();
+                }
+              }
+            }
+
+            courseList = document.getElementById("courselist");
+            for (let i = 0; i < courses.length; i++) {
+              toPlace.push(courses[i].id);
+              courseList.insertAdjacentHTML(
+                "beforeend",
+                `
+              <div class="` +
+                  "course " +
+                  courses[i].type +
+                  `" draggable="true">
+                <div></div>
+                <p class="courseTitle">` +
+                  courses[i].name +
+                  `</p>
+                <p class="courseInfo">` +
+                  courses[i].weight.toFixed(1) +
+                  ` Weighted | Difficulty: ` +
+                  courses[i].difficulty +
+                  `</p>
+                  <p id="baseId" style="display: none">` + courses[i].id + `</p>
+              </div>
+              `
+              );
+            }
+
+            function getArrById(id) {
+              for (let x = 0; x < courses.length; x++) {
+                if (courses[x].id == id) {
+                  return courses[x];
+                }
+              }
+            }
+
+            let items = document.getElementsByClassName("course");
+
+            for (let i = 0; i < items.length; i++) {
+              inf = getYearSlot(items[i]);
+              if (inf[0] >= 0 && inf[1] >= 0) {
+                if (crsData[inf[0]][inf[1]] == 0) {
+                  setBlank(items[i], i);
+                }
+              }
+
+              attachListeners(items[i])
+            }
+            //updateValidity();
+
+          const searchInput = document.getElementById("searchInput");
+          const courseListElm = document.getElementById("courselist");
+          let lastValue = searchInput.innerHTML;
+          searchInput.addEventListener("input", function (e) {
+            if (e.target.value.length == 0) {
+              for (let i = 0; i < courses.length; i++) {
+                toPlace.push(courses[i].id);
+                const elm = courseListElm.insertAdjacentHTML(
+                  "beforeend",
+                  `
+                <div class="` +
+                    "course " +
+                    courses[i].type +
+                    `" draggable="true">
+                  <div></div>
+                  <p class="courseTitle">` +
+                    courses[i].name +
+                    `</p>
+                  <p class="courseInfo">` +
+                    courses[i].weight.toFixed(1) +
+                    ` Weighted | Difficulty: ` +
+                    courses[i].difficulty +
+                    `</p>
+                    <p id="baseId" style="display: none">` + courses[i].id + `</p>
+                </div>
+                `
+                );
+              }
+            } else {
+              courseList.innerHTML = '';
+              if (e.target.value.length > lastValue.length) {
+                for (let x = 0; x < courses.length; x++) {
+                  if (courses[x].name.toLowerCase().startsWith(e.target.value.toLowerCase())) {
+                    const elm = courseList.insertAdjacentHTML(
+                      "afterbegin",
+                      `
+                    <div class="` +
+                        "course " +
+                        courses[x].type +
+                        `" draggable="true">
+                      <div></div>
+                      <p class="courseTitle">` +
+                        courses[x].name +
+                        `</p>
+                      <p class="courseInfo">` +
+                        courses[x].weight.toFixed(1) +
+                        ` Weighted | Difficulty: ` +
+                        courses[x].difficulty +
+                        `</p>
+                        <p id="baseId" style="display: none">` + courses[x].id + `</p>
+                    </div>
+                    `
+                    );
+                  }
+                }
+              }
+              for (let x = 0; x < courseListElm.getElementsByClassName("course").length; x++) {
+                if (
+                  !courseListElm
+                    .getElementsByClassName("course")
+                    [x].getElementsByClassName("courseTitle")[0]
+                    .innerHTML.toLowerCase()
+                    .startsWith(e.target.value.toLowerCase())
+                ) {
+                  courseListElm.getElementsByClassName("course")[x].remove();
+                  x--;
+                  toPlace.splice(x, 1);
+                }
+              }
+            }
+            toPlace = [];
+            for (let x = 0; x < courseListElm.getElementsByClassName("course").length; x++) {
+              toPlace.push(courseListElm.getElementsByClassName("course")[x].querySelector("#baseId").innerHTML);
+            }
+            lastValue = searchInput.innerHTML;
+            let items1 = document.getElementsByClassName("course");
+            for (let i = 0; i < items1.length; i++) {
+              inf = getYearSlot(items1[i]);
+              if (inf[0] >= 0 && inf[1] >= 0) {
+                if (crsData[inf[0]][inf[1]] == 0) {
+                  setBlank(items1[i], i);
+                }
+              }
+              attachListeners(items1[i])
+            }
+          });
+
+          function updateValidity () {
+            recalculateGPA();
+            preFlatCrsData = []
+            for(let i = 0; i < crsData.length; i++) {
+              preFlatCrsData = preFlatCrsData.concat(crsData[i]);
+            }
+            flatCrsData = [];
+            for(let i = 0; i < preFlatCrsData.length; i++) {
+              if (preFlatCrsData[i] != 0) {
+                flatCrsData.push(preFlatCrsData[i]);
+              }
+            }
+            //Graduation reqs
+            reqCur = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+            reqMap = ["Economics", "Math", "English", "History/Civics", "Science", "Language", "Health", "Calculus", "Senior Research Lab"];
+            for(let i = 0; i < flatCrsData.length; i++) {
+              course = getArrById(flatCrsData[i]);
+              if(course.name.includes("Econ")) {
+                reqCur[0] += 1;
+              }
+              if(course.type == "math") {
+                reqCur[1] += 1;
+              }
+              if(course.name.includes("English")) {
+                reqCur[2] += 1;
+              }
+              if(course.name.includes("Hist") || course.name.includes("Government")) {
+                reqCur[3] += 1;
+              }
+              if(course.type == "science") {
+                reqCur[4] += 1;
+              }
+              if(course.type == "language") {
+                reqCur[5] += 1;
+              }
+              if(course.name.includes("Health")) {
+                reqCur[6] += 1;
+              }
+              if(course.name.includes("Calc")) {
+                reqCur[7] += 1;
+              }
+              if(course.type =="senior") {
+                reqCur[8] += 1;
+              }
+            }
+            let notGrad = -1
+            for(let i = 0; i < reqCur.length; i++) {
+              if (reqCur[i] < gradReqs[i]) {
+                notGrad = i;
+                if(skipFlags.includes(String(notGrad))) {
+                  notGrad = -1;
+                  continue;
+                }
+                break;
+              }
+            }
+
+            noPrereq = [];
+            for(let i = 0; i < crsData.length; i++) {
+              for(let j = 0; j < crsData[i].length; j++) {
+                if (crsData[i][j] == 0) {
+                  continue;
+                }
+                course = getArrById(crsData[i][j]);
+                if(course.prereqs.length > 0) {
+                  preqs = course.prereqs
+                  for(let q = 0; q < preqs.length; q++) {
+                    console.log(preqs[q])
+                    includes = false;
+                    for (let z = 0; z < i; z++) {
+                      if (crsData[z].includes(preqs[q])) {
+                        includes = true;
+                      }
+                    }
+                    if(!includes) {
+                      noPrereq.push(course.name);
+                      noPrereq.push(getArrById(preqs[q]).name);
+                      if(skipFlags.includes(String(noPrereq))) {
+                        noPrereq = [];
+                        continue;
+                      }
+                      break;
+                    }
+                  }
+                }
+                if (noPrereq.length > 0) {
+                  break;
+                }
+              }
+              if (noPrereq.length > 0) {
+                break;
+              }
+            }
+
+            let setBox = document.getElementById("alertText");
+            let alert = document.getElementById("topAlert");
+            let store = document.getElementById("declineStore");
+
+            if(notGrad != -1 && !skipFlags.includes(String(notGrad))) {
+              setBox.innerHTML = "Missing " + reqMap[notGrad] + " credits";
+              alert.style.display = "block";
+              store.innerHTML = notGrad;
+            }
+
+            if (noPrereq.length > 0 && !skipFlags.includes(String(noPrereq))) {
+              setBox.innerHTML = "Missing prereq \"" + noPrereq[1] + "\" for \"" + noPrereq[0] + "\"";
+              alert.style.display = "block";
+              store.innerHTML = noPrereq;
+            }
+          }
+
+          function recalculateGPA () {
+            let classes = 0;
+            let gpaTotal = 0;
+            let predictTotal = 0;
+            for (let x = 0; x < 4; x++) {
+              for (let m = 0; m < 7; m++) {
+                if (crsData[x][m] != 0) {
+                  gpaTotal += getWeight(crsData[x][m]);
+                  predictTotal += getAverageWeight(crsData[x][m]);
+                  classes++;
+                  console.log("GPA total: " + gpaTotal);
+                }
+              }
+            }
+            if (gpaTotal != 0) {
+              document.getElementsByClassName('optimalGPATitle')[0].innerHTML = (gpaTotal/classes).toFixed(2);
+              document.getElementsByClassName('optimalGPATitle')[1].innerHTML = (predictTotal/classes).toFixed(2);
+
+            } else {
+              document.getElementsByClassName('optimalGPATitle')[0].innerHTML = '--.--';
+              document.getElementsByClassName('optimalGPATitle')[1].innerHTML = '--.--';
+
+            }
+          }
+
+          function fillClasses() {
+            let crsData2 = [
+              [1111111, 984060, '3184T1', '4310T1', 313753, 0, 730000],
+              [113036, 222136, 0, 441036, 316154, 0, 740500],
+              ['1150T1', 0, 0, 0, 0, 0, 0],
+              ['1160T1', 0, 0, 422036, 0, 0, 0],
+            ];
+            for (let x = 0; x < 4; x++) {
+              for (let i = 0; i < 7; i++) {
+                if (crsData2[x][i] != 0) {
+                  const elm = document.getElementById('year' + (x+1)).getElementsByClassName('course')[i];
+                  console.log(elm);
+                  let localCourse = setById(elm, crsData2[x][i]);
+                }
+              }
+            }
+          }
+
+          function getWeight (id) {
+            console.log("Finding course with id " + id);
+            console.log(courses.find(x => x.id.toString() === id.toString()));
+            return courses.find(x => x.id.toString() === id.toString()).weight;
+          }
+
+          function getAverageWeight (id) {
+            console.log("Finding course with id " + id);
+            console.log(courses.find(x => x.id.toString() === id.toString()));
+            return courses.find(x => x.id.toString() === id.toString()).predictedGrade;
+          }
+
+          document.getElementById('deleteButton').addEventListener('click', function (e) {
+            e.target.parentElement.parentElement.style.setProperty('display', 'none', 'important');
+          });
+
+          document.getElementById('declineButton').addEventListener('click', function (e) {
+            skipFlags.push(e.target.parentElement.querySelector('#declineStore').innerHTML)
+            console.log(skipFlags)
+            e.target.parentElement.parentElement.style.setProperty('display', 'none', 'important');
+            updateValidity();
+          });
+    </script>
+  </body>
+</html>
