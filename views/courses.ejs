@@ -778,19 +778,6 @@
                 "Honors-level Russian language course emphasizing advanced literature analysis, composition, and cultural fluency.",
             },
             {
-              id: "3190T1",
-              name: "Research Stat 1 TJ HN",
-              type: "math",
-              prereqs: [],
-              coreqs: [],
-              weight: 4.5,
-              difficulty: "Hard",
-              years: [12],
-              predictedGrade: 4.5,
-              description:
-                "Honors-level introductory course in research statistics focusing on data analysis and interpretation.",
-            },
-            {
               id: 139000,
               name: "Forensics",
               type: "other",
@@ -897,7 +884,7 @@
             {
               id: 558004,
               name: "AP Spanish Literature",
-              type: "languages",
+              type: "language",
               prereqs: [557004],
               coreqs: [],
               weight: 5,
@@ -1416,7 +1403,7 @@
             },
             {
               id: "314351",
-              name: "Math 1 TJ HN",
+              name: "Math 1 & Math 2 TJ HN",
               type: "math",
               prereqs: [],
               coreqs: [],
@@ -1428,47 +1415,21 @@
                 "Honors-level course covering fundamental concepts in algebra, geometry, and trigonometry.",
             },
             {
-              id: "314352",
-              name: "Math 2 TJ HN",
-              type: "math",
-              prereqs: ["314351"],
-              coreqs: [],
-              weight: 4.5,
-              difficulty: "Easy",
-              years: [10],
-              predictedGrade: 4.7,
-              description:
-                "Honors-level course continuing the study of algebra, geometry, and trigonometry.",
-            },
-            {
-              id: "313753",
-              name: "Math 3 TJ HN",
-              type: "math",
-              prereqs: [],
-              coreqs: [],
-              weight: 4.5,
-              difficulty: "Moderate",
-              years: [11],
-              predictedGrade: 4.8,
-              description:
-                "Honors-level course focusing on advanced topics in algebra, geometry, and precalculus.",
-            },
-            {
               id: "316154",
-              name: "Math 4 TJ HN",
+              name: "RS2 & Math 5",
               type: "math",
               prereqs: ["313753"],
               coreqs: [],
               weight: 4.5,
               difficulty: "Moderate",
-              years: [12],
-              predictedGrade: 4.8,
+              years: [10, 11],
+              predictedGrade: 4.2,
               description:
-                "Honors-level course covering precalculus and its applications.",
+                "Honors-level courses covering precalculus and its applications.",
             },
             {
-              id: "316154",
-              name: "RS2 & Math 5",
+              id: "3164244",
+              name: "Math 4 & Math 5",
               type: "math",
               prereqs: ["313753"],
               coreqs: [],
@@ -1514,6 +1475,19 @@
               weight: 5,
               difficulty: "Moderate",
               years: [10, 11, 12],
+              predictedGrade: 4.5,
+              description:
+                "Artificial Intelligence course.",
+            },
+            {
+              id: "313753",
+              name: "RS1 & Math 3",
+              type: "math",
+              prereqs: [],
+              coreqs: [],
+              weight: 4.5,
+              difficulty: "Easy",
+              years: [9, 10, 11],
               predictedGrade: 4.5,
               description:
                 "Artificial Intelligence course.",
@@ -2511,6 +2485,7 @@
             }
 
             noPrereq = [];
+            console.log(crsData);
             for(let i = 0; i < crsData.length; i++) {
               for(let j = 0; j < crsData[i].length; j++) {
                 if (crsData[i][j] == 0) {
@@ -2520,7 +2495,6 @@
                 if(course.prereqs.length > 0) {
                   preqs = course.prereqs
                   for(let q = 0; q < preqs.length; q++) {
-                    console.log(preqs[q])
                     includes = false;
                     for (let z = 0; z < i; z++) {
                       if (crsData[z].includes(preqs[q])) {
@@ -2574,7 +2548,6 @@
                   gpaTotal += getWeight(crsData[x][m]);
                   predictTotal += getAverageWeight(crsData[x][m]);
                   classes++;
-                  console.log("GPA total: " + gpaTotal);
                 }
               }
             }
@@ -2591,8 +2564,8 @@
 
           function fillClasses() {
             let crsData2 = [
-              [1111111, 984060, '3184T1', '4310T1', 313753, 0, 730000],
-              [113036, 222136, 0, 441036, 316154, 0, 740500],
+              ["1111111", 984060, '3184T1', '4310T1', "313753", 0, 730000],
+              ["113036", 222136, 0, 441036, 3164244, 0, 740500],
               ['1150T1', 0, 0, 0, 0, 0, 0],
               ['1160T1', 0, 0, 422036, 0, 0, 0],
             ];
@@ -2600,22 +2573,18 @@
               for (let i = 0; i < 7; i++) {
                 if (crsData2[x][i] != 0) {
                   const elm = document.getElementById('year' + (x+1)).getElementsByClassName('course')[i];
-                  console.log(elm);
                   let localCourse = setById(elm, crsData2[x][i]);
                 }
               }
             }
+            crsData = crsData2;
           }
 
           function getWeight (id) {
-            console.log("Finding course with id " + id);
-            console.log(courses.find(x => x.id.toString() === id.toString()));
             return courses.find(x => x.id.toString() === id.toString()).weight;
           }
 
           function getAverageWeight (id) {
-            console.log("Finding course with id " + id);
-            console.log(courses.find(x => x.id.toString() === id.toString()));
             return courses.find(x => x.id.toString() === id.toString()).predictedGrade;
           }
 
@@ -2625,7 +2594,6 @@
 
           document.getElementById('declineButton').addEventListener('click', function (e) {
             skipFlags.push(e.target.parentElement.querySelector('#declineStore').innerHTML)
-            console.log(skipFlags)
             e.target.parentElement.parentElement.style.setProperty('display', 'none', 'important');
             updateValidity();
           });
